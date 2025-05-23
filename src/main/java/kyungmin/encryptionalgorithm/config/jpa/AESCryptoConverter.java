@@ -21,6 +21,6 @@ public class AESCryptoConverter implements AttributeConverter<String, String> {
     if (!StringUtils.hasText(dbData)) {
       return null;
     }
-    return AESCryptoUtils.encrypt(dbData);
+    return AESCryptoUtils.decrypt(dbData);
   }
 }

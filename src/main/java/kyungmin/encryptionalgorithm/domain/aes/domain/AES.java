@@ -1,6 +1,7 @@
 package kyungmin.encryptionalgorithm.domain.aes.domain;
 
 import jakarta.persistence.*;
+import kyungmin.encryptionalgorithm.config.jpa.AESCryptoConverter;
 import lombok.*;
 
 @Entity
@@ -15,5 +16,6 @@ public class AES {
   private Long id;
 
   @Column(nullable = false)
+  @Convert(converter = AESCryptoConverter.class)
   private String phoneNumber;
 }

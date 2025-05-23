@@ -30,14 +30,14 @@ public class AESCryptoUtils {
 
   // 암호화
   public static String encrypt(String plainText) {
-    SecretKeySpec secretKey = new SecretKeySpec(privateKey.getBytes(StandardCharsets.UTF_8), "AES");
-    IvParameterSpec IV = new IvParameterSpec(privateKey.substring(0, 16).getBytes());
-
     try {
+      SecretKeySpec secretKey = new SecretKeySpec(privateKey.getBytes(StandardCharsets.UTF_8), "AES");
+      IvParameterSpec IV = new IvParameterSpec(privateKey.substring(0, 16).getBytes());
+
       Cipher cipher = Cipher.getInstance(transformation);
       cipher.init(Cipher.ENCRYPT_MODE, secretKey, IV);
-      byte[] encryptText = cipher.doFinal(plainText.getBytes(StandardCharsets.UTF_8));
-      return Hex.encodeHexString(encryptText);
+      byte[] encryptByte = cipher.doFinal(plainText.getBytes(StandardCharsets.UTF_8));
+      return Hex.encodeHexString(encryptByte);
     } catch (Exception e) {
       throw new RuntimeException("암호화 과정에서 오류가 발생했습니다.");
     }
@@ -45,14 +45,14 @@ public class AESCryptoUtils {
 
   // 복호화
   public static String decrypt(String cipherText) {
-    SecretKeySpec secretKey = new SecretKeySpec(privateKey.getBytes(StandardCharsets.UTF_8), "AES");
-    IvParameterSpec IV = new IvParameterSpec(privateKey.substring(0, 16).getBytes());
-
     try {
+      SecretKeySpec secretKey = new SecretKeySpec(privateKey.getBytes(StandardCharsets.UTF_8), "AES");
+      IvParameterSpec IV = new IvParameterSpec(privateKey.substring(0, 16).getBytes());
+
       Cipher cipher = Cipher.getInstance(transformation);
       cipher.init(Cipher.DECRYPT_MODE, secretKey, IV);
-      byte[] decryptText = Hex.decodeHex(cipherText.toCharArray());
-      return new String(cipher.doFinal(decryptText), StandardCharsets.UTF_8);
+      byte[] decryptByte = Hex.decodeHex(cipherText.toCharArray());
+      return new String(cipher.doFinal(decryptByte), StandardCharsets.UTF_8);
     } catch (Exception e) {
       throw new RuntimeException("복호화 과정에서 오류가 발생했습니다.");
     }
