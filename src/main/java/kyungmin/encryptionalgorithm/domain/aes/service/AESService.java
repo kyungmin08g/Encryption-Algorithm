@@ -17,4 +17,9 @@ public class AESService {
         .build()
     );
   }
+
+  public String getPhoneNumber(String id) {
+    return repository.findById(Long.parseLong(id))
+      .get().getPhoneNumber();
+  }
 }
