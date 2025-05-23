@@ -1,6 +1,6 @@
-package kyungmin.encryptionalgorithm.domain.aes.controller;
+package kyungmin.encryptionalgorithm.symmetric.block.AES.controller;
 
-import kyungmin.encryptionalgorithm.domain.aes.service.AESService;
+import kyungmin.encryptionalgorithm.symmetric.block.AES.service.AESService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

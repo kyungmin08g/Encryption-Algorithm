@@ -1,8 +1,8 @@
-package kyungmin.encryptionalgorithm.config.jpa;
+package kyungmin.encryptionalgorithm.symmetric.block.AES.converter;
 
 import jakarta.persistence.AttributeConverter;
 import jakarta.persistence.Converter;
-import kyungmin.encryptionalgorithm.symmetric.block.AES.AESCryptoUtils;
+import kyungmin.encryptionalgorithm.symmetric.block.AES.utils.AESCryptoUtils;
 import org.springframework.util.StringUtils;
 
 @Converter

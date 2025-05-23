@@ -1,7 +1,7 @@
-package kyungmin.encryptionalgorithm.domain.aes.service;
+package kyungmin.encryptionalgorithm.symmetric.block.AES.service;
 
-import kyungmin.encryptionalgorithm.domain.aes.domain.AES;
-import kyungmin.encryptionalgorithm.domain.aes.repository.AESRepository;
+import kyungmin.encryptionalgorithm.symmetric.block.AES.domain.AES;
+import kyungmin.encryptionalgorithm.symmetric.block.AES.repository.AESRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

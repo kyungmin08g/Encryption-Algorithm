@@ -1,7 +1,7 @@
-package kyungmin.encryptionalgorithm.domain.aes.domain;
+package kyungmin.encryptionalgorithm.symmetric.block.AES.domain;
 
 import jakarta.persistence.*;
-import kyungmin.encryptionalgorithm.config.jpa.AESCryptoConverter;
+import kyungmin.encryptionalgorithm.symmetric.block.AES.converter.AESCryptoConverter;
 import lombok.*;
 
 @Entity

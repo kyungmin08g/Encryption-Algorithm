@@ -1,6 +1,6 @@
-package kyungmin.encryptionalgorithm.domain.aes.repository;
+package kyungmin.encryptionalgorithm.symmetric.block.AES.repository;
 
-import kyungmin.encryptionalgorithm.domain.aes.domain.AES;
+import kyungmin.encryptionalgorithm.symmetric.block.AES.domain.AES;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

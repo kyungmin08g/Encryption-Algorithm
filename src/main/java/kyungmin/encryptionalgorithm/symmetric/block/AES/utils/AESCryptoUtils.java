@@ -1,4 +1,4 @@
-package kyungmin.encryptionalgorithm.symmetric.block.AES;
+package kyungmin.encryptionalgorithm.symmetric.block.AES.utils;
 
 import jakarta.annotation.PostConstruct;
 import org.apache.commons.codec.binary.Hex;
