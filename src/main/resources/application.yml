@@ -1,3 +1,18 @@
 spring:
   application:
     name: Encryption-Algorithm
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PW}
+
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+
+crypto:
+  private-key: ${CRYPTO_PRIVATE_KEY}
+  transformation: ${CRYPTO_TRANSFORMATION}
