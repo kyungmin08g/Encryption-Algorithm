@@ -36,6 +36,7 @@ public class AESCryptoUtils {
 
       Cipher cipher = Cipher.getInstance(transformation);
       cipher.init(Cipher.ENCRYPT_MODE, secretKey, IV);
+
       byte[] encryptByte = cipher.doFinal(plainText.getBytes(StandardCharsets.UTF_8));
       return Hex.encodeHexString(encryptByte);
     } catch (Exception e) {
@@ -51,6 +52,7 @@ public class AESCryptoUtils {
 
       Cipher cipher = Cipher.getInstance(transformation);
       cipher.init(Cipher.DECRYPT_MODE, secretKey, IV);
+
       byte[] decryptByte = Hex.decodeHex(cipherText.toCharArray());
       return new String(cipher.doFinal(decryptByte), StandardCharsets.UTF_8);
     } catch (Exception e) {

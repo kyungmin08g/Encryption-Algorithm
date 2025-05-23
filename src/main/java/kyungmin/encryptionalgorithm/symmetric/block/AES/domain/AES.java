@@ -16,6 +16,6 @@ public class AES {
   private Long id;
 
   @Column(nullable = false)
-  @Convert(converter = AESCryptoConverter.class)
+  @Convert(converter = AESCryptoConverter.class) // 커스텀 Converter 추가
   private String phoneNumber;
 }
