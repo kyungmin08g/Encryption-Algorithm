@@ -1,6 +1,7 @@
 package kyungmin.encryptionalgorithm.symmetric.block.DES.domain;
 
 import jakarta.persistence.*;
+import kyungmin.encryptionalgorithm.symmetric.block.DES.converter.DESCryptoConverter;
 import lombok.*;
 
 @Entity
@@ -15,5 +16,6 @@ public class DES {
   private Long id;
 
   @Column(nullable = false)
+  @Convert(converter = DESCryptoConverter.class)
   private String phoneNumber;
 }

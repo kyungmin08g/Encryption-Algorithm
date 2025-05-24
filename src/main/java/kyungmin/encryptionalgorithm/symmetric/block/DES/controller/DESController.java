@@ -17,7 +17,7 @@ public class DESController {
     return ResponseEntity.ok().build();
   }
 
-  @GetMapping(value = "")
+  @GetMapping(value = "/get")
   public ResponseEntity<String> getPhoneNumber(@RequestParam(name = "id") String id) {
     return ResponseEntity.ok(service.getPhoneNumber(id));
   }
